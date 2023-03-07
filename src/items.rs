@@ -1,6 +1,8 @@
 use borsh::{BorshDeserialize, BorshSerialize};
 
-#[derive(Debug, Clone, Default, BorshDeserialize, BorshSerialize, PartialEq, PartialOrd)]
+#[derive(
+    Debug, Clone, Default, BorshDeserialize, BorshSerialize, PartialEq, PartialOrd, Eq, Ord,
+)]
 pub struct BillableItem {
     name: String,
     cost: String,
