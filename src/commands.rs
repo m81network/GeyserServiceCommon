@@ -9,13 +9,17 @@ pub enum ServiceCommand {
         recipient: Pubkey,
         validator: Pubkey,
         service_id: String,
+        tx: String,
+        date: String,
     },
     TxEmail {
         validator: Pubkey,
-        from: String,
-        reply_to: String,
-        to: String,
+        customer_name: String,
+        email: String,
+        subject: String,
         items: Vec<BillableItem>,
+        tx: String,
+        date: String,
     },
     NewsletterEmail {
         validator: Pubkey,
@@ -24,5 +28,7 @@ pub enum ServiceCommand {
         to: String,
         notification: String,
         service_id: String, //HTML String,
+        tx: String,
+        date: String,
     },
 }
